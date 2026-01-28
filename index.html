@@ -21,15 +21,10 @@
     button { background: #c4161c; color: #fff; border: none; padding: 10px; width: 100%; border-radius: 6px; cursor: pointer; }
     .cart { position: fixed; bottom: 0; left: 0; right: 0; background: #111; padding: 15px; border-top: 2px solid #c4161c; }
     .contact { padding: 20px; text-align: center; }
-    .contact a { display: block; color: #f5c542; margin: 5px 0; text-decoration: none; }
-  .slider-controls{display:flex;justify-content:flex-end;gap:10px;padding:0 15px 5px}
-.slider-controls button{background:#c4161c;color:#fff;border:none;padding:6px 12px;border-radius:6px;font-size:16px}
-</style>
+    .contact a { display: block; color: #f5c542; margin: 5px 0; text-decoration: none; }</style>
 </head>
 <body><header><h1>SLUDGE BURGER</h1></header>
-<section class="hero"><p>Free Delivery • eThekwini</p></section><h2 class="section-title">🍔 Combo Cheeseburger</h2>
-<div class="slider-controls"><button onclick="slideLeft('combo')">◀</button><button onclick="slideRight('combo')">▶</button></div>
-<section class="slider" id="combo">
+<section class="hero"><p>Free Delivery • eThekwini</p></section><h2 class="section-title">🍔 Combo Cheeseburger</h2><section class="slider" id="combo">
 <section class="slider">
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Chips (Small)</h3><p class="price">R15</p><button onclick="addToCart('Chips Small',15)">Add</button></div></div>
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Chips (Large)</h3><p class="price">R22</p><button onclick="addToCart('Chips Large',22)">Add</button></div></div>
@@ -39,9 +34,7 @@
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Cheeseburger for 2</h3><p class="price">R60</p><button onclick="addToCart('Cheeseburger for 2',60)">Add</button></div></div>
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Double Burger & Chips</h3><p class="price">R85</p><button onclick="addToCart('Double Burger & Chips',85)">Add</button></div></div>
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Burgers for 2 & Chips</h3><p class="price">R85</p><button onclick="addToCart('Burgers for 2 & Chips',85)">Add</button></div></div>
-</section><h2 class="section-title">🌭 Sausage Roll & Chips</h2>
-<div class="slider-controls"><button onclick="slideLeft('sausage')">◀</button><button onclick="slideRight('sausage')">▶</button></div>
-<section class="slider" id="sausage">
+</section><h2 class="section-title">🌭 Sausage Roll & Chips</h2><section class="slider" id="sausage">
 <section class="slider">
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Sausage Single</h3><p class="price">R16</p><button onclick="addToCart('Sausage Single',16)">Add</button></div></div>
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Chips & Sausage (Small)</h3><p class="price">R30</p><button onclick="addToCart('Chips & Sausage Small',30)">Add</button></div></div>
@@ -49,9 +42,7 @@
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Sausage Roll Single</h3><p class="price">R30</p><button onclick="addToCart('Sausage Roll Single',30)">Add</button></div></div>
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Sausage Roll & Chips</h3><p class="price">R40</p><button onclick="addToCart('Sausage Roll & Chips',40)">Add</button></div></div>
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Cheeseburger, Chips & Extra Sausage</h3><p class="price">R85</p><button onclick="addToCart('Cheeseburger Chips Extra Sausage',85)">Add</button></div></div>
-</section><h2 class="section-title">🌯 Wrap Burger Menu</h2>
-<div class="slider-controls"><button onclick="slideLeft('wrap')">◀</button><button onclick="slideRight('wrap')">▶</button></div>
-<section class="slider" id="wrap">
+</section><h2 class="section-title">🌯 Wrap Burger Menu</h2><section class="slider" id="wrap">
 <section class="slider">
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Wrap Burger Single</h3><p class="price">R45</p><button onclick="addToCart('Wrap Burger',45)">Add</button></div></div>
   <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Wrap Burger & Cheeseburger</h3><p class="price">R75</p><button onclick="addToCart('Wrap & Cheeseburger',75)">Add</button></div></div>
@@ -66,7 +57,5 @@
   let total = 0;
   function addToCart(item, price){ total += price; document.getElementById('total').innerText = total; }
   function checkout(){ alert('Order placed! Total: R' + total); total = 0; document.getElementById('total').innerText = total; }
-  function slideLeft(id){document.getElementById(id).scrollLeft-=260}
-  function slideRight(id){document.getElementById(id).scrollLeft+=260}
-</script></body>
-  </html>
+    </script></body>
+</html>
