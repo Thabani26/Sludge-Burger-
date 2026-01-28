@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sludge Burger | Order Online</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #000; color: #fff; }
+    header { background: #c4161c; padding: 15px; text-align: center; }
+    header h1 { font-size: 26px; letter-spacing: 1px; }
+    .hero { padding: 20px; text-align: center; background: #111; }
+    .section-title { padding: 15px; font-size: 20px; color: #f5c542; }
+    .slider { display: flex; overflow-x: auto; gap: 15px; padding: 15px; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
+    .slider::-webkit-scrollbar { display: none; }
+    .card { scroll-snap-align: start; background: #fff; color: #000; min-width: 240px; border-radius: 12px; overflow: hidden; }
+    .card { background: #fff; color: #000; min-width: 240px; border-radius: 12px; overflow: hidden; }
+    .card img { width: 100%; height: 150px; object-fit: cover; }
+    .card-content { padding: 12px; }
+    .card-content h3 { font-size: 16px; margin-bottom: 5px; }
+    .price { color: #c4161c; font-weight: bold; margin-bottom: 8px; }
+    button { background: #c4161c; color: #fff; border: none; padding: 10px; width: 100%; border-radius: 6px; cursor: pointer; }
+    .cart { position: fixed; bottom: 0; left: 0; right: 0; background: #111; padding: 15px; border-top: 2px solid #c4161c; }
+    .contact { padding: 20px; text-align: center; }
+    .contact a { display: block; color: #f5c542; margin: 5px 0; text-decoration: none; }
+  .slider-controls{display:flex;justify-content:flex-end;gap:10px;padding:0 15px 5px}
+.slider-controls button{background:#c4161c;color:#fff;border:none;padding:6px 12px;border-radius:6px;font-size:16px}
+</style>
+</head>
+<body><header><h1>SLUDGE BURGER</h1></header>
+<section class="hero"><p>Free Delivery • eThekwini</p></section><h2 class="section-title">🍔 Combo Cheeseburger</h2>
+<div class="slider-controls"><button onclick="slideLeft('combo')">◀</button><button onclick="slideRight('combo')">▶</button></div>
+<section class="slider" id="combo">
+<section class="slider">
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Chips (Small)</h3><p class="price">R15</p><button onclick="addToCart('Chips Small',15)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Chips (Large)</h3><p class="price">R22</p><button onclick="addToCart('Chips Large',22)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Single Burger</h3><p class="price">R30</p><button onclick="addToCart('Single Burger',30)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Burgers for 2</h3><p class="price">R50</p><button onclick="addToCart('Burgers for 2',50)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Cheeseburger & Chips</h3><p class="price">R50</p><button onclick="addToCart('Cheeseburger & Chips',50)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Cheeseburger for 2</h3><p class="price">R60</p><button onclick="addToCart('Cheeseburger for 2',60)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Double Burger & Chips</h3><p class="price">R85</p><button onclick="addToCart('Double Burger & Chips',85)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Burgers for 2 & Chips</h3><p class="price">R85</p><button onclick="addToCart('Burgers for 2 & Chips',85)">Add</button></div></div>
+</section><h2 class="section-title">🌭 Sausage Roll & Chips</h2>
+<div class="slider-controls"><button onclick="slideLeft('sausage')">◀</button><button onclick="slideRight('sausage')">▶</button></div>
+<section class="slider" id="sausage">
+<section class="slider">
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Sausage Single</h3><p class="price">R16</p><button onclick="addToCart('Sausage Single',16)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Chips & Sausage (Small)</h3><p class="price">R30</p><button onclick="addToCart('Chips & Sausage Small',30)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Chips & Sausage</h3><p class="price">R35</p><button onclick="addToCart('Chips & Sausage',35)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Sausage Roll Single</h3><p class="price">R30</p><button onclick="addToCart('Sausage Roll Single',30)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Sausage Roll & Chips</h3><p class="price">R40</p><button onclick="addToCart('Sausage Roll & Chips',40)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Cheeseburger, Chips & Extra Sausage</h3><p class="price">R85</p><button onclick="addToCart('Cheeseburger Chips Extra Sausage',85)">Add</button></div></div>
+</section><h2 class="section-title">🌯 Wrap Burger Menu</h2>
+<div class="slider-controls"><button onclick="slideLeft('wrap')">◀</button><button onclick="slideRight('wrap')">▶</button></div>
+<section class="slider" id="wrap">
+<section class="slider">
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Wrap Burger Single</h3><p class="price">R45</p><button onclick="addToCart('Wrap Burger',45)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Wrap Burger & Cheeseburger</h3><p class="price">R75</p><button onclick="addToCart('Wrap & Cheeseburger',75)">Add</button></div></div>
+  <div class="card"><img src="https://via.placeholder.com/300x200"><div class="card-content"><h3>Wrap Burger & Chips</h3><p class="price">R75</p><button onclick="addToCart('Wrap & Chips',75)">Add</button></div></div>
+</section><div class="contact">
+  <a href="tel:0678814453">📞 067 881 4453</a>
+  <a href="tel:0685570176">📞 068 557 0176</a>
+</div><div class="cart">
+  <p>Total: R<span id="total">0</span></p>
+  <button onclick="checkout()">Checkout</button>
+</div><script>
+  let total = 0;
+  function addToCart(item, price){ total += price; document.getElementById('total').innerText = total; }
+  function checkout(){ alert('Order placed! Total: R' + total); total = 0; document.getElementById('total').innerText = total; }
+  function slideLeft(id){document.getElementById(id).scrollLeft-=260}
+  function slideRight(id){document.getElementById(id).scrollLeft+=260}
+</script></body>
+  </html>
